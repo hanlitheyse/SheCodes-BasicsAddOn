@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+         background: radial-gradient(circle at 0% 0.5%, rgb(241, 241, 242) 0.1%, rgb(224, 226, 228) 100.2%);
+        font-family: 'Roboto Condensed', sans-serif;
+        text-align: center;
+        max-width:  1000px;
+        padding: 5rem;
+    }
+
+    .dark{
+        background-color: rgb(43, 43, 43);
+        color: white;
+    }
+
+
+    button {
+        border-radius: 0.5rem;
+        border-style: solid;
+        font-size: 1rem;
+        padding: 0.5rem;
+        float: left;
+        transition:  all 200ms ease-in-out;
+    }
+
+    button:hover {
+        background-color: rgb(54, 53, 53);
+        color: white;
+        cursor: pointer;
+    }
+
+    h1{
+        font-size:  5rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    
+    h2{
+        font-size:  3rem;
+        margin: 0;
+        font-weight: 100;
+        padding: 1rem;
+    }
+
+    main{
+                border:  solid  rgb(54, 53, 53) ;
+        border-radius:  0.5rem;
+        padding: 2rem;
+    }
+
+    .gallery{
+        display: grid;
+        grid-template-columns:  1fr 1fr 1fr 1fr ;
+        grid-gap: 1rem;
+        }
+
+    .large{
+        grid-column-start: 1;
+        grid-column-end: 5;
+       min-height: 400px;
+       transition: all 250ms linear;
+       }
+
+    .large:hover{
+        transform: scale(1.055);
+       filter: contrast(75%);
+    }
+
+    img{
+       width: 100%;
+       border-radius: 0.5rem;
+       max-height: 150px;
+    }
+
+    p{
+        font-size:  1.5rem;
+    }
+</style>
+<body>
+    <header>
+                <button>Dark Theme</button>
+                <br>
+                <br>
+        <h1>Hiking 
+        </h1>
+        <h2>
+            Exploring Queensland one hike at a time
+        </h2>
+    </header>
+    <main>
+        <div class ='gallery'>
+            <a class = 'large'  href ="https://www.queensland.com/au/en/things-to-do/adventure/walking-hiking-adventure-queensland/hiking-trails-and-walks-in-queensland"><img class = 'large' src="https://www.wanderlustmovement.org/wp-content/uploads/2021/03/hiking-trails-in-the-western-cape.jpg" alt=""></a>
+            <img src="https://www.queensland.com/us/en/things-to-do/adventure/walking-hiking-adventure-queensland/best-day-hikes-from-brisbane.thumb.800.480.png" alt="">
+            <img src="https://queensland.com/content/dam/teq/consumer/global/images/destinations/tropical-north-queensland/blog-images/hero-banner/2020_TNQ_EllinjaaFalls_NaturalLandscapes_JackHarlem_142443.jpg" alt="">
+            <img src="https://besthike.files.wordpress.com/2020/06/otter-trail-.jpg?w=640" alt="">
+            <img src="https://media.weareexplorers.co/wp-content/uploads/2019/06/19064115/Miranda_Fittock_Carnarvon.jpg" alt="">
+        
+        </div>
+        <p>
+            Queensland has beautiful landscapes and plenty to explore. My favorite way of doing so is by different trail hikes.
+            From waterfalls to mountain tops and bays, there is always a way to explore this beautiful landscape on foot.
+            Hiking in Queensland requires general fitness and a good set of hiking boots. Safety is very important on these hikes and it
+            is iof great importance to have all the essentials with you. Always have a back-up supply of food and water in case 
+            of unexpected delays. Make sure to also carry first aid essentials with you. 
+
+            Happy hiking guys!
+        </p>
+    </main>
+    <footer>
+        <h3>coded by Hanli Theyse</H1></h3>
+
+    </footer>
+    <script>
+        let body = document.querySelector('body');
+        let  themeBtn= document.querySelector('button');
+        
+
+        themeBtn.onclick = () =>{
+            (body.classList.contains('dark')) ? makeLight(): makeDark();
+        }
+
+        function makeDark(){
+            body.classList.add('dark')  ;
+            themeBtn.innerHTML = "Light Theme" ;
+        }
+
+
+        function makeLight(){
+            body.classList.remove('dark')  ;
+            themeBtn.innerHTML = "Dark Theme" ;
+        }
+    </script>
+</body>
+</html>
